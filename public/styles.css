@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@200;300;400;500;600&family=Josefin+Sans:ital,wght@0,700;1,100;1,500;1,600&display=swap');
+
+:root {
+  --main-gray-dark: rgb(30, 30, 30);
+  --green-light: rgb(219, 255, 148);
+  --green-dark: rgb(60, 160, 97);
+  --yellow-light: rgb(255, 255, 193);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: var(--main-gray-dark);
+}
+
+h1 {
+  font-family: 'Handjet', sans-serif;
+  font-weight: 300;
+  font-size: 6rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  background-color: var(--main-gray-dark);
+  padding: 0.2rem 0;
+}
+
+a:hover {
+  color: var(--yellow-light);
+}
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.container-title p {
+  font-size: 1.2rem;
+}
+
+.container-searchbar {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+}
+
+.filter-icon {
+  position: absolute;
+  right: 1rem;
+  top: 10%;
+  font-size: 1.5rem;
+}
+
+input {
+  height: 2.5rem;
+  width: 27rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+.card-job {
+  width: 12rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: solid;
+  background-color: white;
+}
+
+.job-date {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.job-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.smart-working {
+  background-color: var(--green-light);
+  border-radius: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+.milano {
+  background-color: var(--green-dark);
+  border-radius: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+footer {
+  width: 100%;
+  height: 6rem;
+  padding: 2rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.323);
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-title {
+    width: 80%;
+  }
+
+  .container-searchbar {
+    width: 90%;
+    text-align: center;
+    position: relative;
+  }
+
+  .filter-icon {
+    right: 2rem;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .container {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .card-job {
+    width: 10rem;
+    margin: auto;
+  }
+
+  .job-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-job {
+    width: 15rem;
+    font-size: 1.1rem;
+  }
+
+  .container {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+}
