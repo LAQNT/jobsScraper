@@ -5,7 +5,7 @@ const app = express();
 const { createDbConnection } = require('./utils/db');
 
 const db = new sqlite3.Database('jobs.db');
-const HTTP_PORT = 3001;
+const HTTP_PORT = process.env.PORT || 3001;
 
 // set EJS
 app.set('view engine', 'ejs');
