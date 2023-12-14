@@ -1,5 +1,6 @@
 //Input filter
 const inputAttributes = {
+  id: 'searchbar',
   type: 'text',
   placeholder: 'Filter jobs by title',
 };
@@ -59,6 +60,6 @@ const renderCards = (data) => {
 renderCards(jobData);
 
 //footer
-const footer = document.querySelector('footer');
-footer.innerText =
+const footerSpan = document.getElementById('last-update');
+footerSpan.innerText =
   'Last update: ' + jobData[0].insertion_date.replace('/', '-');

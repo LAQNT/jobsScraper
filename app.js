@@ -1,9 +1,9 @@
 const sqlite3 =
   require('sqlite3').verbose(); /*verbose => computer gives details of what its doing*/
 const express = require('express');
-const app = express();
 const { createDbConnection } = require('./utils/db');
 
+const app = express();
 const db = new sqlite3.Database('jobs.db');
 const HTTP_PORT = process.env.PORT || 3001;
 
@@ -49,4 +49,4 @@ app.listen(HTTP_PORT, () => {
   console.log(`Server running on port ${HTTP_PORT}`);
 });
 // Enpoint + execute function => db query
-app.get('/jobs', getAllJobs);
+app.get('/', getAllJobs);
