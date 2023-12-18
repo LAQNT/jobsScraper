@@ -1,8 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const createDbConnection = () => {
+const createDbConnection = (dbPath) => {
   try {
-    const db = new sqlite3.Database('jobs.db');
+    const db = new sqlite3.Database(dbPath);
     console.log('Connected to SQLite database.');
     return db;
   } catch (error) {

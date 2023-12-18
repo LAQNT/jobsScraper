@@ -39,7 +39,7 @@ const main = async () => {
     await browser.close();
 
     //conect to db
-    const db = createDbConnection();
+    const db = createDbConnection('jobs.db');
 
     //execute function to insert data into db
     jobsData.forEach((job) => {

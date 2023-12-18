@@ -43,7 +43,7 @@ const getAllJobs = async (req, res) => {
   }
 };
 
-createDbConnection();
+createDbConnection('jobs.db');
 // Initialize server
 app.listen(HTTP_PORT, () => {
   console.log(`Server running on port ${HTTP_PORT}`);
