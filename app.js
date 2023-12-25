@@ -1,6 +1,7 @@
 const sqlite3 =
   require('sqlite3').verbose(); /*verbose => computer gives details of what its doing*/
 const express = require('express');
+const favicon = require('express-favicon');
 const { createDbConnection } = require('./utils/db');
 
 const app = express();
@@ -11,6 +12,7 @@ const HTTP_PORT = process.env.PORT || 3001;
 app.set('view engine', 'ejs');
 // middleware => path to static files
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Get jobs
 const getAllJobs = async (req, res) => {
